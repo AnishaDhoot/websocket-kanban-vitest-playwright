@@ -1,0 +1,81 @@
+.titles{
+    font-size: x-large;
+    color: black;
+}
+
+.todotask, .inprogresstask, .donetask {
+    width: 300px;
+    height: 200px;
+    margin-top:30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.todotask {
+    background-color: aqua;
+    color: black;
+}
+
+.inprogresstask {
+    background-color: #f1e15d;
+    color: black;
+}
+
+.donetask {
+    background-color: #4caf50;
+    color: white;
+}
+
+.taskcontainer {
+    display: flex;
+    flex-direction: row;
+    gap: 20px; /* Increased gap for better spacing */
+    padding: 30px;
+    justify-content: space-between; /* Distribute space evenly */
+    flex-wrap: wrap;
+    align-items: flex-start; /* Align items at the top */
+    height: auto; /* Automatically adjust based on content */
+}
+
+.todocontainer, .inprogresscontainer, .donecontainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Increased gap inside containers */
+    padding: 20px; /* Slightly increased padding */
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    transition: all 0.3s ease;
+    flex: 1;
+    max-width: 350px; /* Set a max width for each container */
+    min-width: 300px; /* Ensure containers don't get too small */
+    height: 900px;
+}
+
+.todocontainer {
+    border: 2px solid #a2c6f4;
+    background-color: #f4faff;
+}
+
+.inprogresscontainer {
+    border: 2px solid #f5d66b;
+    background-color: #faf3cd;
+}
+
+.donecontainer {
+    border: 2px solid #76c7c0;
+    background-color: #d4f7f2;
+}
+
+
+.droppable-area {
+    padding: 10px;
+    border-radius: 8px;
+    min-height: 900px; /* Ensures there's room to drop */
+  }
+  
