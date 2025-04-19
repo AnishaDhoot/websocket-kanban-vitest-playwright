@@ -37,15 +37,15 @@ const AddTask = ({ socket }) => {
   };
 
   return (
-    <div>
+    <div className="addTaskContainer">
       <button onClick={() => setShowModal(true)} className="addBtn">
-        Add Task
+        Click Here to add a Task
       </button>
 
       {showModal && (
         <div className="overlay">
           <div className="modal">
-            <h2>Add New Task</h2>
+            <h2 className="modalTitle">Add New Task</h2>
             <form onSubmit={handleSubmit} className="form">
               <input
                 type="text"
@@ -69,12 +69,14 @@ const AddTask = ({ socket }) => {
                 onChange={handleChange}
                 className="fileInput"
               />
+              <div className="priorityCategory">
               <select
                 name="priority"
                 value={task.priority}
                 onChange={handleChange}
                 className="select"
               >
+                <option value="">Priority</option>
                 <option value="high">High</option>
                 <option value="medium">Medium</option>
                 <option value="low">Low</option>
@@ -85,10 +87,12 @@ const AddTask = ({ socket }) => {
                 onChange={handleChange}
                 className="select"
               >
+                <option value="">Category</option>
                 <option value="bug">Bug</option>
                 <option value="enhancement">Enhancement</option>
                 <option value="feature">Feature</option>
               </select>
+              </div>
               <div className="actions">
                 <button
                   type="button"

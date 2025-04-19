@@ -10,7 +10,6 @@ function KanbanBoard() {
     
     return (
         <div>
-            <h2>Kanban Board</h2>
             {/* TODO: Implement task rendering and interactions */}
             <AddTask socket={socket}/>
             <TaskContainer socket={socket} />
