@@ -280,3 +280,56 @@ body {
     cursor: pointer;
     margin-left: 40%;
   }
+ 
+  .attachment-container {
+    margin: 12px 0;
+  }
+  
+  .attachment-link, .attachment-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.05);
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    width: 100%;
+    text-align: left;
+  }
+  
+  .attachment-link {
+    color: #58a2e7;
+  }
+  
+  .attachment-button {
+    color: #c9c9c9;
+  }
+  
+  .attachment-link:hover, .attachment-button:hover {
+    background: rgba(255, 255, 255, 0.1);
+    text-decoration: none;
+  }
+  
+  .attachment-icon {
+    font-size: 1.1rem;
+  }
+  
+  .attachment-name {
+    font-size: 0.9rem;
+    word-break: break-all;
+    flex-grow: 1;
+  }
+
+  .todotask, .inprogresstask, .donetask {
+    user-select: none;
+  }
+  
+  .todotask > *, .inprogresstask > *, .donetask > * {
+    pointer-events: none;
+  }
+  
+  .button-container, .attachment-display {
+    pointer-events: auto;
+  }

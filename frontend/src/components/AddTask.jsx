@@ -63,35 +63,48 @@ const AddTask = ({ socket }) => {
                 onChange={handleChange}
                 className="textarea"
               />
-              <input
+              {/* <input
                 type="file"
                 name="attachments"
                 onChange={handleChange}
                 className="fileInput"
               />
+              {task.attachments && (
+                <div className="preview">
+                  <button
+                    type="button"
+                    onClick={() =>
+                      window.open(URL.createObjectURL(task.attachments), "_blank")
+                    }
+                    className="previewBtn"
+                  >
+                    Preview Document
+                  </button>
+                </div>
+              )} */}
               <div className="priorityCategory">
-              <select
-                name="priority"
-                value={task.priority}
-                onChange={handleChange}
-                className="select"
-              >
-                <option value="">Priority</option>
-                <option value="high">High</option>
-                <option value="medium">Medium</option>
-                <option value="low">Low</option>
-              </select>
-              <select
-                name="category"
-                value={task.category}
-                onChange={handleChange}
-                className="select"
-              >
-                <option value="">Category</option>
-                <option value="bug">Bug</option>
-                <option value="enhancement">Enhancement</option>
-                <option value="feature">Feature</option>
-              </select>
+                <select
+                  name="priority"
+                  value={task.priority}
+                  onChange={handleChange}
+                  className="select"
+                >
+                  <option value="">Priority</option>
+                  <option value="high">High</option>
+                  <option value="medium">Medium</option>
+                  <option value="low">Low</option>
+                </select>
+                <select
+                  name="category"
+                  value={task.category}
+                  onChange={handleChange}
+                  className="select"
+                >
+                  <option value="">Category</option>
+                  <option value="bug">Bug</option>
+                  <option value="enhancement">Enhancement</option>
+                  <option value="feature">Feature</option>
+                </select>
               </div>
               <div className="actions">
                 <button
